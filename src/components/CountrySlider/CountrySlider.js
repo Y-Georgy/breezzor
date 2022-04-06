@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, memo } from 'react'
 import { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { ArrowLeft, ArrowRight } from '../../images/images'
@@ -57,4 +57,4 @@ const CountrySlider = () => {
   )
 }
 
-export default CountrySlider
+export default memo(CountrySlider)

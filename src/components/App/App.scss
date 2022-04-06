@@ -13,6 +13,12 @@
   padding: 190px 30px 30px;
   position: relative;
 
+  &__form {
+    position: relative;
+    z-index: 2;
+    max-width: 740px;
+  }
+
   &__overlay {
     position: absolute;
     top: 0;

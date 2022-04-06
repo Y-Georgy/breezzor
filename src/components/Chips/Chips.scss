@@ -1,0 +1,37 @@
+.chips {
+  display: flex;
+  align-self: flex-start;
+  padding: 16px 0;
+
+  &__button {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "Roboto";
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: #434343;
+    border: none;
+    border-radius: 18px;
+    background-color: #F0F0F0;
+    padding: 5px 24px 3px;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      background: #FB9155;
+      transition: all 0.3s ease-out;
+    }
+
+    &:active {
+      cursor: pointer;
+      color: #fff;
+      background: #EB6012;
+      transition: all 0.3s ease-out;
+    }
+  }
+}
