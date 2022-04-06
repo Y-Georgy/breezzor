@@ -1,5 +1,6 @@
 import Chips from '../Chips/Chips'
 import CountrySlider from '../CountrySlider/CountrySlider'
+import TextInput from '../TextInput/TextInput'
 import './App.scss'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <form className="app__form" name="breezzor">
         <CountrySlider />
         <Chips />
+        <TextInput />
       </form>
       <div className="app__overlay" />
     </div>
