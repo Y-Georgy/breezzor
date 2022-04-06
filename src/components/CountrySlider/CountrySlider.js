@@ -1,53 +1,58 @@
+import { useState, useEffect } from 'react'
 import { Navigation } from 'swiper'
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { ArrowLeft, ArrowRight } from '../../images/images'
 import 'swiper/scss'
 import './CountrySlider.scss'
 
 const CountrySlider = () => {
-  const swiper = useSwiper()
+  const [countriesArray, setCountriesArray] = useState([])
+  const [currentCountry, setCurrentCountry] = useState('')
+
+  useEffect(() => {
+    setCountriesArray([
+      'Испания',
+      'Франция',
+      'Сент Винсент и Гренадины',
+      'Португалия',
+      'Англия',
+      'Китай',
+      'Россия',
+      'Корея',
+      'Италия',
+      'Соединенное Королевство',
+      'Япония',
+      'Саудовская Аравия',
+    ])
+  }, [])
+
+  if (countriesArray.length === 0) return null
 
   return (
     <section className="country-slider">
-      <h1 className="country-slider__title">Сент_Винсент и Гренадины</h1>
-      <div className="country-slider__swiper">
-        <button className="prev" onClick={() => swiper.slidePrev()}>
-          Slide to the prev slide
-        </button>
+      <h1 className="country-slider__title">{currentCountry}</h1>
+      <div className="country-slider__swiper-overlay">
+        <ArrowLeft className="country-slider__btn-prev" />
         <Swiper
           modules={[Navigation]}
           spaceBetween={28}
-          slidesPerView={5}
+          slidesPerView={'auto'}
+          centeredSlides={true}
+          initialSlide={2}
+          onSlideChange={(swiper) => setCurrentCountry(countriesArray[swiper.activeIndex])}
           navigation={{
-            prevEl: '.prev',
-            nextEl: '.next',
+            prevEl: '.country-slider__btn-prev',
+            nextEl: '.country-slider__btn-next',
           }}
         >
-          <SwiperSlide>
-            <p className="country-slider__swiper-slide">Испания</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <p className="country-slider__swiper-slide">Франция</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <p className="country-slider__swiper-slide">Сент Винсент и Гренадины</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <p className="country-slider__swiper-slide">Португалия</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <p className="country-slider__swiper-slide">Саудовская Аравия</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <p className="country-slider__swiper-slide">Slide 6</p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <p className="country-slider__swiper-slide">Slide 7</p>
-          </SwiperSlide>
+          {countriesArray.map((country) => (
+            <SwiperSlide key={country}>{country}</SwiperSlide>
+          ))}
         </Swiper>
-        <button className="next" onClick={() => swiper.slideNext()}>
-          Slide to the next slide
-        </button>
+        <ArrowRight className="country-slider__btn-next" />
       </div>
+      <hr className="country-slider__line" />
+      <p className="country-slider__subtitle">Мир Breezzor огромный, исследуй его!</p>
     </section>
   )
 }
