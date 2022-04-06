@@ -3,24 +3,42 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('./Montserrat-Medium.woff2') format('woff2'),
-       url('./Montserrat-Medium.woff') format('woff');
+  src: url('./Montserrat/Montserrat-Medium.woff2') format('woff2'),
+       url('./Montserrat/Montserrat-Medium.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Montserrat';
-  font-style:  normal;
+  font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("./Montserrat-SemiBold.woff2") format("woff2"),
-       url("./Montserrat-SemiBold.woff") format("woff");
+  src: url("./Montserrat/Montserrat-SemiBold.woff2") format("woff2"),
+       url("./Montserrat/Montserrat-SemiBold.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Montserrat';
-  font-style:  normal;
+  font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url("./Montserrat-Black.woff2") format("woff2"),
-       url("./Montserrat-Black.woff") format("woff");
+  src: url("./Montserrat/Montserrat-Black.woff2") format("woff2"),
+       url("./Montserrat/Montserrat-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./Roboto/Roboto.woff2') format('woff2'),
+       url('./Roboto/Roboto.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./Roboto/Robotomedium.woff2") format("woff2"),
+       url("./Roboto/Robotomedium.woff") format("woff");
 }
