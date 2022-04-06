@@ -1,0 +1,48 @@
+.country-slider {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+
+  &__title {
+    text-align: center;
+    font-family: inherit;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 51px;
+    margin: 0 0 16px;
+  }
+
+  &__swiper {
+    max-width: 740px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__swiper-slide {
+    color: #fff;
+    font-size: 17px;
+    line-height: 25px;
+    font-family: inherit;
+    font-weight: 600;
+    margin: 0;
+    display: inline-block;
+    letter-spacing: 0.5px;
+
+    &:hover {
+     cursor: pointer;
+    }
+  }
+
+  .swiper-slide {
+    width: auto !important;
+  }
+
+  .swiper-button-next {
+    right: -30px;
+  }
+
+  .swiper-button-prev {
+    left: -30px;
+  }
+}
