@@ -20,6 +20,10 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    console.log('Отправка формы')
+    console.log('Страна:', currentCountry)
+    console.log('Что ищем:', searchType)
+    console.log('Запрос:', searchValue)
   }
 
   return (
