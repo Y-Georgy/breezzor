@@ -10,7 +10,7 @@
   min-width: 320px;
   max-width: 1920px;
   box-sizing: border-box;
-  padding: 190px 30px 30px;
+  padding: 190px 30px 128px;
   position: relative;
 
   &__form {
@@ -27,5 +27,11 @@
     right: 0;
     background: rgba(31, 31, 31, 0.6);
     z-index: 1;
+  }
+
+  &__buttons-overlay {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 0;
   }
 }

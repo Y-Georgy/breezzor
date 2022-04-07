@@ -5,9 +5,8 @@ import { ArrowLeft, ArrowRight } from '../../images/images'
 import 'swiper/scss'
 import './CountrySlider.scss'
 
-const CountrySlider = () => {
+const CountrySlider = ({ currentCountry, setCurrentCountry }) => {
   const [countriesArray, setCountriesArray] = useState([])
-  const [currentCountry, setCurrentCountry] = useState('')
 
   useEffect(() => {
     setCountriesArray([

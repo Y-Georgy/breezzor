@@ -13,8 +13,9 @@
     border: none;
     border-radius: 18px;
     background-color: #F0F0F0;
-    padding: 5px 24px 3px;
+    padding: 4px 24px;
     margin-right: 16px;
+    transition: all 0.3s ease-out;
 
     &:last-child {
       margin-right: 0;
@@ -32,6 +33,17 @@
       color: #fff;
       background: #EB6012;
       transition: all 0.3s ease-out;
+    }
+
+    &_active {
+      color: #fff;
+      background-color: #EB6012;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        background-color: #CB540F;
+        transition: all 0.3s ease-out;
+      }
     }
   }
 }
