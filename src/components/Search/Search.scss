@@ -3,8 +3,8 @@
 
   &__icon {
     position: absolute;
-    top: 14px;
-    right: 22px;
+    top: 12px;
+    right: 20px;
     width: 20px;
     height: 20px;
     z-index: 2;
@@ -16,23 +16,47 @@
     font-weight: 500;
     font-family: "Roboto";
     color: #434343;
-    padding: 14px 80px 10px 16px;
+    padding: 8px 80px 8px 16px;
     background-color: #fff;
     border: 1px solid #E8E8E8;
     border-radius: 4px;
     box-sizing: border-box;
     width: 100%;
-  
+
     &::placeholder {
       color: #7D7D7D;
       font-weight: 400;
     }
-  
+
     &:focus {
       outline: none;
       border-color: #EB6012;
       box-shadow: inset 0 0 3px 0 #EB6012;
       transition: all 0.3s ease-out;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    &__input {
+      line-height: 20px;
+    }
+
+    &__icon {
+      top: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__input {
+      padding: 5px 35px 5px 8px;
+      font-size: 13px;
+    }
+
+    &__icon {
+      top: 9px;
+      right: 12px;
+      width: 16px;
+      height: 16px;
     }
   }
 }

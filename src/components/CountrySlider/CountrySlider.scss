@@ -115,4 +115,55 @@
     letter-spacing: 0.5px;
     margin: 0;
   }
+
+  @media (max-width: 1100px) {
+    &__title {
+      font-size: 37px;
+      line-height: 45px;
+    }
+
+    .swiper-slide {
+      font-size: 16px;
+      line-height: 23px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    &__btn-prev {
+      top: 65px;
+    }
+
+    &__btn-next {
+      top: 65px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__title {
+      font-size: 25px;
+      line-height: 30px;
+      min-height: 60px;
+    }
+
+    .swiper-slide {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &__subtitle {
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    &__btn-prev {
+      display: none;
+    }
+
+    &__btn-next {
+      display: none;
+    }
+  }
 }
